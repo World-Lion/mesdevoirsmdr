@@ -156,15 +156,19 @@ function carregarListaDespesas(despesas = Array(), filtro = false){
         linha.insertCell(0).innerHTML = `${d.jour}/${d.mois}/${d.an}`;
        
         switch(d.typ){
-            case '1': d.typ = 'Alimentação';
+            case '1': d.typ = 'Math';
                 break;
-            case '2': d.typ = 'Educação';
+            case '2': d.typ = 'Espagnol';
                 break;
-            case '3': d.typ = 'Lazer';
+            case '3': d.typ = 'Anglais';
                 break;
-            case '4': d.typ = 'Saúde';
+            case '4': d.typ = 'Art';
                 break;
-            case '5': d.typ = 'Transporte';
+            case '5': d.typ = 'Oral';
+                break;
+            case '6': d.typ = 'Physique';
+                break;
+            case '7': d.typ = 'SVT';
                 break;
         }
 
