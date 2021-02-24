@@ -1,0 +1,135 @@
+﻿<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Devoir Julioju</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script src="https://kit.fontawesome.com/7b2c1e0792.js" crossorigin="anonymous"></script>
+
+        <script src="app.js"></script>
+    <meta http-equiv="Content-Language" content="fr"></head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" width="50" height="35" alt="Orçamento pessoal">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Inscrire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultation.html">Consulter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <h1 class="display-4">Enregistrement des nouveau devoirs</h1>
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-2">
+                    <select class="form-control" id="an">
+                        <option value="">-- Année --</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <select class="form-control" id="mois">
+                        <option value="">-- Mois --</option>
+                        <option value="1">Janvier</option>
+                        <option value="2">Février</option>
+                        <option value="3">Mars</option>
+                        <option value="4">Avril</option>
+                        <option value="5">Mai</option>
+                        <option value="6">Juin</option>
+                        <option value="7">Juillet</option>
+                        <option value="8">Août</option>
+                        <option value="9">Septembre</option>
+                        <option value="10">Octobre</option>
+                        <option value="11">Novembre</option>
+                        <option value="12">Décembre</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">  
+                    <input type="text" class="form-control" placeholder="Jour" id="jour"/>
+                </div>
+
+                <div class="col-md-6">
+                    <select class="form-control" id="typ">
+                      <option value=""> -- Type --</option>
+                      <option value="1">Math</option>
+                      <option value="2">Espagnol</option>
+                      <option value="3">Anglais</option>
+                      <option value="4">Art</option>
+                      <option value="5">Oral</option>
+                      <option value="6">Physique</option>
+                      <option value="7">SVT</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Description" id="desc" />
+                </div>
+
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Valeur autre" id="valor" />
+                </div>
+
+                <div class="col-md-2 d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" onclick="cadastrarDespesa()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalRegistraDespesa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div id="modal_titulo_div">
+                      <h5 class="modal-title" id="modal_titulo"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+
+                    <div class="modal-body" id="modal_conteudo">
+                    </div>
+
+                    <div class="modal-footer">                       
+                        <button type="button" data-dismiss="modal" id="modal_btn"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <nav class="p-4 mb-2 bg-primary text-white" style="text-align: center;">By Julioju <i class="far fa-copyright"></i> 
+            </nav>   
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

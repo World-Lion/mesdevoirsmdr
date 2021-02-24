@@ -116,10 +116,10 @@ function cadastrarDespesa(){
     if(despesa.validarDados()){
         bd.gravar(despesa);
 
-        document.getElementById('modal_titulo').innerHTML = 'Registro inserido com sucesso';
+        document.getElementById('modal_titulo').innerHTML = 'Enregistrement inséré avec succès';
         document.getElementById('modal_titulo_div').className = 'modal-header text-success';
-        document.getElementById('modal_conteudo').innerHTML = 'Despesa cadastrada com sucesso.';
-        document.getElementById('modal_btn').innerHTML = 'Voltar';
+        document.getElementById('modal_conteudo').innerHTML = 'Dépense enregistrée avec succès.';
+        document.getElementById('modal_btn').innerHTML = 'Validé';
         document.getElementById('modal_btn').className = 'btn btn-success';    
        
         an.value = '';
@@ -130,10 +130,10 @@ function cadastrarDespesa(){
         valor.value = '';
     } 
     else{
-        document.getElementById('modal_titulo').innerHTML = 'Erro na inclusão da despesa.';
+        document.getElementById('modal_titulo').innerHTML = 'Erreur lors de l\'inclusion des dépenses.';
         document.getElementById('modal_titulo_div').className = 'modal-header text-danger';
-        document.getElementById('modal_conteudo').innerHTML = 'Erro na gravação, verifique se todos os campos foram preenchidos corretamente.';
-        document.getElementById('modal_btn').innerHTML = 'Voltar e corrigir';
+        document.getElementById('modal_conteudo').innerHTML = 'Erreur d\'enregistrement, vérifiez si tous les champs ont été remplis correctement.';
+        document.getElementById('modal_btn').innerHTML = 'Fermé et corrigé';
         document.getElementById('modal_btn').className = 'btn btn-danger';      
     }
 
