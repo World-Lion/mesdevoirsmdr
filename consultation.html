@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Devoirs Julioju</title>
+        <title>Mes Devoirs</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -22,10 +22,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item ">
-                            <a class="nav-link" href="index.html">Inscrire</a>
+                            <a class="nav-link" href="index.html">Ajouter</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="consultation.html">Consulter</a>
+                            <a class="nav-link" href="consultation.html">Mes devoirs</a>
                         </li>
                     </ul>
                 </div>
@@ -71,29 +71,30 @@
                     <input type="text" class="form-control" placeholder="Jour" id="jour" />
                 </div>
 
-                <div class="col-md-6">
+              <div class="col-md-6">
                     <select class="form-control" id="typ">
                       <option value=""> -- Type --</option>
-                      <option value="1">Math</option>
+                      <option value="1">Maths</option>
                       <option value="2">Espagnol</option>
                       <option value="3">Anglais</option>
-                      <option value="4">Art</option>
-                      <option value="5">Oral</option>
-                      <option value="6">Physique</option>
+                      <option value="4">Arts Plas</option>
+                      <option value="5">Français</option>
+                      <option value="6">Physique Chimie</option>
                       <option value="7">SVT</option>
-                      </select>
+                        <option value="8">Techno</option>
+                        <option value="9">Latin</option>
+                        <option value="10">Histoire Geo</option>
+                        <option value="11">Musique</option>
+                        <option value="12">Sport</option>
+                          <option value="13">Autre</option>
+                    </select>
                 </div>
             </div>
 
-            <div class="row mb-5">
-                <div class="col-md-8">
-                    <input type="text" class="form-control" placeholder="Description" id="desc" />
-                </div>
 
-                <div class="col-md-2">
-                    <input type="text" class="form-control" placeholder="Valeur autre" id="valor" />
-                </div>
+      
 
+                
                 <div class="col-md-2 d-flex justify-content-end">
                     <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
                         <i class="fas fa-search"></i>
@@ -109,7 +110,7 @@
                         <th>Date</th>
                         <th>Type</th>
                         <th>Description</th>
-                        <th>Valeur autre</th>
+                        <th>Type</th>
                         <th></th>
                       </tr>
                     </thead>
